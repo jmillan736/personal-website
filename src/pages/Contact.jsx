@@ -4,9 +4,9 @@ import Reveal from "../animations/Reveal";
 const Contact = () => {
   return (
     <section id='contact' className="w-screen h-max flex flex-col text-cta-text px-[5%] mb-[25vh] items-center">
-      <div className="flex flex-col bg-cta-active w-max h-max p-8 text-center gap-6 rounded-3xl border-2 hover:bg-card hover:text-copy-primary">
+      <div className="flex flex-col bg-cta-active w-max h-max p-4 text-center gap-6 rounded-3xl border-2 hover:bg-card hover:text-copy-primary">
         <Reveal>
-          <h1 className="text-5xl font-extrabold">Contact 📮</h1>
+          <h1 className="text-4xl font-extrabold">Contact 📮</h1>
         </Reveal>
         <Reveal>
           <p>

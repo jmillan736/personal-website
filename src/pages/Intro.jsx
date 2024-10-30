@@ -6,12 +6,13 @@ import Reveal from "../animations/Reveal";
 const Intro = () => {
   const [isClick, setIsClick] = useState(false);
   const variants = {
-    jump: {y: [null, -31, 0],
+    jump: {y: [null, -20, 10, 0],
       transition: {
         duration:0.5,
         ease:'easeInOut'
       }
     },
+    noJump: {y:0}
   };
   const playSound = () => {
     const audio = new Audio(
@@ -29,7 +30,7 @@ const Intro = () => {
     >
       <div className="flex flex-row items-center max-md:flex-col-reverse">
         <div className="h-max flex flex-col gap-10 w-6/12 mr-[20%] max-md:m-0 max-md:text-center">
-          <Reveal>
+          <Reveal width="100%">
             <h1 className="text-7xl font-extrabold ">
               Hi, I&apos;m Jeffrey 👋🏼
             </h1>
@@ -51,7 +52,7 @@ const Intro = () => {
           <Reveal>
             <a
               href="mailto:millanj@usc.edu"
-              className="inline-block whitespace-nowr text-cta-text rounded-lg py-4 px-6 text-3xl font-semibold"
+              className="inline-block whitespace-now bg-cta-active text-cta-text rounded-lg py-4 px-6 text-3xl font-semibold opacity-90 hover:opacity-100"
             >
               Contact Me
             </a>
@@ -60,7 +61,7 @@ const Intro = () => {
         <Reveal>
           <motion.button
             onClick={playSound}
-            animate={isClick ? "jump" : ''}
+            animate={isClick ? "jump" : 'noJump'}
             variants={variants}
           >
             <img
