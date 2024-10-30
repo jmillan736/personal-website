@@ -6,7 +6,7 @@ import Reveal from "../animations/Reveal";
 const Intro = () => {
   const [isClick, setIsClick] = useState(false);
   const variants = {
-    jump: {y: [null, -30, 0],
+    jump: {y: [null, -31, 0],
       transition: {
         duration:0.5,
         ease:'easeInOut'
