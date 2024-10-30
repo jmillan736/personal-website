@@ -20,7 +20,7 @@ const ProjectCard = ({ title, image, tools = [], description, link }) => {
       </Reveal>
       <Reveal>
         <div className="flex flex-row">
-          <h2 className="font-bold text-xl mb-2 pr-2">{title}</h2>
+          <h2 className="font-bold text-xl mb-2">{title} 👉🏽</h2>
           <a
             href={link}
             target="_blank"
