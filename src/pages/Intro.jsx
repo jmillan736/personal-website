@@ -38,7 +38,7 @@ const Intro = () => {
         </div>
         <Reveal>
           <img
-            src="src/assets/intro/penguin.gif"
+            src="/penguin.gif"
             className="object-scale-down"
           ></img>
         </Reveal>

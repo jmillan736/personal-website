@@ -1,6 +1,6 @@
 import React from "react";
 import Reveal from "../animations/Reveal";
-import projects from "../assets/projects/projects.json";
+import projects from "./projects.json";
 import ProjectCard from "../components/ProjectCard";
 
 const Work = () => {
