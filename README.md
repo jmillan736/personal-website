@@ -7,4 +7,5 @@ Shoutout to [hover.dev](https://www.hover.dev) for inspiration!!!
 5. `npx tailwindcss init -p`
 6. Follow Step Three in [Install Tailwind CSS with Vite](https://tailwindcss.com/docs/guides/vite)
 
+[Instructions on deploying a vite project](https://medium.com/@aishwaryaparab1/deploying-vite-deploying-vite-app-to-github-pages-166fff40ffd3)
 You should be solid from there 😎
