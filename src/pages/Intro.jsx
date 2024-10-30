@@ -20,7 +20,7 @@ const Intro = () => {
               studying computer engineering.
               <br />
               <br />
-              I received a B.S in Electrical Engineering and Computer Science at
+              I received a B.S. in Electrical Engineering and Computer Science at
               UC Berkeley 🐻
               <br />
               <br />
@@ -38,7 +38,7 @@ const Intro = () => {
         </div>
         <Reveal>
           <img
-            src="/penguin.gif"
+            src="/personal-website/penguin.gif"
             className="object-scale-down"
           ></img>
         </Reveal>
