@@ -1,0 +1,31 @@
+[
+    {
+        "title": "VibeS",
+        "image":"src/assets/projects/project_pictures/vibes.png",
+        "tools": ["React", "Pytorch", "HugginFace"],
+        "description": "Got a picture and Spotify account?? Input it into our ML model and get a curated playlist from Spotify 🎶",
+        "link": "https://github.com/luisricardodiaz/VibeS"
+        
+    },
+    {
+        "title": "RateMyClasses",
+        "image":"src/assets/projects/project_pictures/rate_my_classes.png",
+        "tools": ["React", "Boostrap", "HTML/CSS", "MySQL"],
+        "description": "A web application built with Next.js and MySQL, allowing UC Berkeley students to rate and review classes while using an Express.js server to handle API requests and a MySQL database to store user data like login information, reviews, and ratings.",
+        "link": "https://github.com/EmmanuelCobian/rate-my-classes"
+    },
+    {
+        "title": "Secure File Sharing System",
+        "image":"src/assets/projects/project_pictures/file_system_design.png",
+        "tools": ["Go"],
+        "description": "This secure file-sharing system leverages robust cryptographic functions to allow users to log in, store, and share files safely and efficiently, even in the face of potential attackers.",
+        "link": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+    },
+    {
+        "title": "Squishy Methane Analysis",
+        "image":"src/assets/projects/project_pictures/oil_rig.jpg",
+        "tools": ["Python", "Pytorch", "Pandas", "Numpy"],
+        "description": "Have a methane leak? Don't know where to look? This model can take a look for you with its continuous monitoring capabilities using a vision transfomer.",
+        "link": "https://github.com/BerkeleyExpertSystemTechnologiesLab/Squishy-Methane-Analysis"
+    }
+]
