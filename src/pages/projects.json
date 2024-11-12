@@ -1,31 +1,70 @@
 [
-    {
-        "title": "VibeS",
-        "image":"/personal-website/vibes.png",
-        "tools": ["React", "Pytorch", "HugginFace"],
-        "description": "Got a picture and Spotify account?? Input it into our ML model and get a curated playlist from Spotify 🎶",
-        "link": "https://github.com/luisricardodiaz/VibeS"
-        
-    },
-    {
-        "title": "RateMyClasses",
-        "image":"/personal-website/rate_my_classes.png",
-        "tools": ["React", "Boostrap", "HTML/CSS", "MySQL"],
-        "description": "A web application built with Next.js and MySQL, allowing UC Berkeley students to rate and review classes while using an Express.js server to handle API requests and a MySQL database to store user data like login information, reviews, and ratings.",
-        "link": "https://github.com/EmmanuelCobian/rate-my-classes"
-    },
-    {
-        "title": "Secure File Sharing System",
-        "image":"/personal-website/file_system_design.png",
-        "tools": ["Go"],
-        "description": "This secure file-sharing system leverages robust cryptographic functions to allow users to log in, store, and share files safely and efficiently, even in the face of potential attackers.",
-        "link": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
-    },
-    {
-        "title": "Squishy Methane Analysis",
-        "image":"/personal-website/oil_rig.jpg",
-        "tools": ["Python", "Pytorch", "Pandas", "Numpy"],
-        "description": "Have a methane leak? Don't know where to look? This model can take a look for you with its continuous monitoring capabilities using a vision transfomer.",
-        "link": "https://github.com/BerkeleyExpertSystemTechnologiesLab/Squishy-Methane-Analysis"
-    }
+  {
+    "title": "VibeS",
+    "image": "/personal-website/vibes.png",
+    "tools": ["React", "Pytorch", "HugginFace"],
+    "description": "Got a picture and Spotify account?? Input it into our ML model and get a curated playlist from Spotify 🎶",
+    "long_description": [
+      "VibeS was our submission for Cal Hacks 10.0! The hackathon experience was incredible, with everyone hustling to build their projects over several intense days and showcasing some truly impressive creations. Our team wanted to dive into something music-related and incorporate machine learning, so after brainstorming and taking inspiration from the buildings of San Francisco, we landed on the idea of VibeS.",
+      "The concept of VibeS was to generate a unique Spotify playlist based on a picture. We would analyze the image to derive characteristics such as the time of day and environmental features—whether it looked urban, snowy, or like a desert—and match those to a curated playlist from Spotify. One of the biggest challenges was gathering and preparing a dataset to experiment with, which led me to explore Kaggle for the data we needed. We used a vision transformer model from Hugging Face’s API to power the image analysis. Once the model was trained, I focused on designing the user interface for displaying the outputted playlist.",
+      "From this project, I learned the importance of close collaboration, leveraging each team member’s strengths and learning from each other. I also gained valuable experience in pitching our product to companies like Intel and Convex, which taught me how to effectively present our work."
+    ],
+    "link": "https://github.com/luisricardodiaz/VibeS",
+    "more_links": [
+      {
+        "title": "Live Demo",
+        "url": "https://devpost.com/software/vibes-n2qa73?ref_content=my-projects-tab&ref_feature=my_projects"
+      }
+    ]
+  },
+  {
+    "title": "RateMyClasses",
+    "image": "/personal-website/rate_my_classes.png",
+    "tools": ["React", "Boostrap", "HTML/CSS", "MySQL"],
+    "description": "A web application built with Next.js and MySQL, allowing UC Berkeley students to rate and review classes while using an Express.js server to handle API requests and a MySQL database to store user data like login information, reviews, and ratings.",
+    "long_description": [
+      "RateMyClasses was our final project submission for the Fullstack DeCal at UC Berkeley. The goal of this project was to create a helpful platform where UC Berkeley students could share advice about classes, offering insights into whether they found certain courses useful or not. Our vision was to provide a space for students to make more informed academic decisions.",
+      "My contributions spanned both front-end and backend development. On the frontend, I focused on building a distribution bar that visually displayed the score distribution for a specific class. I also implemented a responsive search bar that autocompletes user input, suggesting the top five closest class matches in real time. As for the backend, I did a couple of SQL queries that helped with feeding that information into the search bar.",
+      "This project was a fantastic learning experience, as I got to see how the frontend and backend come together to create a seamless user experience (very fitting for a Fullstack course!). Collaborating with my team was a highlight, and to top it off, we were thrilled to win first place for our section, earning a memorable $0.45 check as our prize!"
+    ],
+    "link": "https://github.com/EmmanuelCobian/rate-my-classes",
+    "more_links": []
+  },
+  {
+    "title": "Secure File Sharing System",
+    "image": "/personal-website/file_system_design.png",
+    "tools": ["Go"],
+    "description": "This secure file-sharing system leverages robust cryptographic functions to allow users to log in, store, and share files safely and efficiently, even in the face of potential attackers.",
+    "long_description": [
+      "Your satellite hacking adventures have made you realize the Jupiter Orbiter project must be stopped, but intercepting it won’t be easy. Fortunately, EvanBot enlists the help of CodaBot, a CSA architect who suggests intercepting the craft near Mars as it uses the planet’s gravitational pull. However, executing this plan requires coordination with your allies on Mars, and communication must pass through Caltopia’s watchful eye. The only available method involves storing messages on REGULUS, a lunar-based cloud storage service accessible from both Earth and Mars.",
+      "EvanBot and CodaBot are positioned in the Arctic, prepared to use REGULUS when you give the signal. The message must be securely delivered by July 28, the critical date for the orbital slingshot. Every effort must be made to protect your plans from prying eyes, as the future of interplanetary peace hinges on your success.",
+      "REGULUS has significant limitations. Despite its promise of durability, its privacy policy is dubious. Caltopia could easily intercept or analyze data stored on it, and the service claims no adherence to privacy laws due to its lunar location. The architecture includes an unsecured shared key space and constant data and network analysis, with potential modifications performed without consent. Your mission requires hiding your communication in plain sight, using encryption to outmaneuver Caltopia’s surveillance, while ensuring that the plans reach Mars securely.",
+      "I’m choosing not to share this openly to prevent any issues related to academic dishonesty. However, I’m happy to share it with those I’ve met in person who haven’t had the opportunity to review it in a professional setting. Please send me an email with your Github username down below."
+    ],
+    "link": "https://github.com/jmillan736/cs161-project2",
+    "more_links": [
+      {
+        "title": "More Details",
+        "url": "https://fa23.cs161.org/proj2/"
+      }
+    ]
+  },
+  {
+    "title": "Squishy Methane Analysis",
+    "image": "/personal-website/oil_rig.jpg",
+    "tools": ["Python", "Pytorch", "Pandas", "Numpy"],
+    "description": "Have a methane leak? Don't know where to look? This model can take a look for you with its continuous monitoring capabilities using a vision transfomer.",
+    "long_description": [
+      "I conducted comprehensive research and synthesized academic articles focused on machine learning-based methane leak detection, laying the groundwork for our project's methodology. Managing a dataset of 25 infrared videos, I curated and preprocessed the data by segmenting transitions between leak and non-leak events, performing image normalization, and applying background subtraction to ensure high-quality input for model training.",
+      "I recreated and fine-tuned machine learning models, such as BEiT, utilizing frameworks like TensorFlow, PyTorch, and Hugging Face. By iteratively training these models, I achieved progressive improvements in accuracy and efficiency for methane leak detection. Throughout the project, I presented updates to faculty mentors and peers, culminating in a research poster that I showcased at TECHCON 2023. Additionally, I visualized our leak repair program with a decision tree and conducted a cost analysis to support our approach.",
+      "Our team’s research efforts were successfully compiled for publication, and our work was honored at IMECE 2024, where we won the “Best Paper Competition” in the Artificial Intelligence Emerging Strategic Area."
+    ],
+    "link": "https://github.com/BerkeleyExpertSystemTechnologiesLab/Squishy-Methane-Analysis",
+    "more_links": [
+      {
+        "title": "Squishy Robotics",
+        "url": "https://squishy-robotics.com"
+      }
+    ]
+  }
 ]

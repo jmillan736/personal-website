@@ -1,22 +1,40 @@
-import React from "react";
+import React, { useState } from "react";
 import PropTypes from "prop-types";
 import { title } from "framer-motion/client";
 import ToolList from "./ToolList";
 import Reveal from "../animations/Reveal";
+import { motion } from "framer-motion";
 
-const ProjectCard = ({ title, image, tools = [], description, link }) => {
+const ProjectCard = ({
+  title,
+  image,
+  tools = [],
+  description,
+  link,
+  onClick,
+}) => {
   return (
     <div className="bg-card text-copy-primary p-4 rounded-lg shadow-md">
       <Reveal>
-        <div>
+        <button
+          className="overflow-hidden w-full h-48 mb-4 rounded-lg bg-gray-500 bg-opacity-10"
+          onClick={onClick}
+        >
           {image && (
-            <img
+            <motion.img
+              whileHover={{
+                scale: 1.2,
+                rotate: 5,
+                y: 20,
+                transition: { duration: 0.3, ease: "easeInOut" },
+              }}
+              initial={{ scale: 1.2, y: 50 }}
               src={image}
               alt={title}
-              className="w-full h-48 object-cover rounded-t-lg mb-4"
+              className="w-full h-full mb-4 rounded-t-lg object-scale-down"
             />
           )}
-        </div>
+        </button>
       </Reveal>
       <Reveal>
         <div className="flex flex-row">
@@ -60,6 +78,7 @@ ProjectCard.propTypes = {
   tools: PropTypes.arrayOf(PropTypes.string).isRequired,
   description: PropTypes.string.isRequired,
   link: PropTypes.string.isRequired,
+  onClick: PropTypes.func.isRequired,
 };
 
 export default ProjectCard;

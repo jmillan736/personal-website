@@ -37,7 +37,7 @@ const Intro = () => {
           </Reveal>
           <Reveal>
             <p className="text-3xl font-semibold">
-              I&apos;m first year grad student at USC ✌🏼
+              I&apos;m first year PhD student at USC ✌🏼
               <br />
               studying computer engineering.
               <br />
