@@ -38,17 +38,21 @@ Routine content updates, such as revising the CV, should only require changes to
 
 ## Site Editions
 
-The site ships with two editions that render the same content:
+The codebase contains two editions that render the same content. Visitors only
+see the academic edition; the original edition is kept in the repository but is
+switched off.
 
-| Edition  | URL                              | Description                                                        |
-| -------- | -------------------------------- | ------------------------------------------------------------------ |
-| Original | `/personal-website/#original`    | The original design, featuring animations and a pill-style navbar. |
-| Academic | `/personal-website/#academic`    | A traditional academic homepage with bio, publications, and news.  |
+| Edition  | Status       | Description                                                                |
+| -------- | ------------ | -------------------------------------------------------------------------- |
+| Academic | Live         | A traditional academic homepage with bio, publications, and side projects. |
+| Original | Switched off | The original design, featuring animations and a pill-style navbar.         |
 
 Both are configured under `config` in `src/content/site.js`:
 
-- `defaultEdition` — the edition loaded when the URL has no hash (`"original"` or `"academic"`).
-- `showEditionSwitcher` — when `true`, displays an edition toggle in the bottom-right corner.
+- `defaultEdition` — the edition visitors see (`"academic"` or `"original"`).
+- `showEditionSwitcher` — `false` by default, so visitors only ever see `defaultEdition`.
+  When `true`, an edition toggle appears in the bottom-right corner and the
+  `/personal-website/#original` and `/personal-website/#academic` URLs select an edition.
 
 ## Configuration
 

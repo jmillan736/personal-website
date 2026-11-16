@@ -1,7 +1,14 @@
-// Edition shell. Picks which version of the site to show:
+// Edition shell. Picks which version of the site to show.
+//
+// config.showEditionSwitcher = false (the current setting in site.js):
+//   there is exactly one version, config.defaultEdition. The URL hash and any
+//   choice saved earlier are ignored, so visitors cannot switch.
+//
+// config.showEditionSwitcher = true: the version comes from
 //   1. the URL hash, if it is exactly #original or #academic
 //   2. otherwise the last choice saved in localStorage ("edition")
-//   3. otherwise config.defaultEdition from src/content/site.js
+//   3. otherwise config.defaultEdition
+//
 // Each edition is loaded lazily, so visitors only download the one they see.
 import { lazy, Suspense, useCallback, useEffect, useState } from "react";
 import { config } from "./content/site.js";
@@ -15,12 +22,16 @@ const EDITIONS = {
 
 const isEdition = (value) => value === "original" || value === "academic";
 
+const DEFAULT_EDITION = isEdition(config.defaultEdition) ? config.defaultEdition : "academic";
+const CAN_SWITCH = config.showEditionSwitcher === true;
+
 function editionFromHash() {
   const hash = window.location.hash.slice(1);
   return isEdition(hash) ? hash : null;
 }
 
 function initialEdition() {
+  if (!CAN_SWITCH) return DEFAULT_EDITION;
   const fromHash = editionFromHash();
   if (fromHash) return fromHash;
   try {
@@ -29,15 +40,16 @@ function initialEdition() {
   } catch {
     // Storage blocked: use the default below.
   }
-  return isEdition(config.defaultEdition) ? config.defaultEdition : "original";
+  return DEFAULT_EDITION;
 }
 
 function App() {
   useTheme(); // keeps the light/dark class on <body> in sync
   const [edition, setEdition] = useState(initialEdition);
 
-  // Follow manual hash edits and back/forward navigation.
+  // Follow manual hash edits and back/forward navigation (switch mode only).
   useEffect(() => {
+    if (!CAN_SWITCH) return undefined;
     const onHashChange = () => {
       const fromHash = editionFromHash();
       if (fromHash) setEdition(fromHash);
@@ -70,7 +82,7 @@ function App() {
       <Suspense fallback={<div className="min-h-screen" />}>
         <Edition />
       </Suspense>
-      <EditionSwitcher edition={edition} onChange={switchEdition} />
+      {CAN_SWITCH && <EditionSwitcher edition={edition} onChange={switchEdition} />}
     </>
   );
 }
