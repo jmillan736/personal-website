@@ -1,19 +1,22 @@
 {
-  "name": "my-project",
+  "name": "personal-website",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://github.com/jmillan736/personal-website",
+  "homepage": "https://jmillan736.github.io/personal-website/",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
+    "build:preview": "vite build --mode preview",
     "lint": "eslint .",
     "preview": "vite preview",
-    "predeploy" : "npm run build",
-    "deploy" : "gh-pages -d dist"
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
+    "@fontsource-variable/source-serif-4": "^5.3.1",
     "framer-motion": "^11.11.10",
+    "prop-types": "^15.8.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
   },
@@ -31,6 +34,7 @@
     "globals": "^15.11.0",
     "postcss": "^8.4.47",
     "tailwindcss": "^3.4.14",
-    "vite": "^5.4.9"
+    "vite": "^5.4.9",
+    "vite-plugin-singlefile": "^2.3.4"
   }
 }

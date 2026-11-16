@@ -6,6 +6,7 @@ export default {
   ],
   theme: {
     extend: {
+      // These read the CSS variables defined in src/index.css (.light/.dark/.red).
       colors: {
         background: "rgba(var(--background))",
         border: "rgba(var(--border))",
@@ -15,10 +16,12 @@ export default {
         cta: "rgba(var(--cta))",
         "cta-active": "rgba(var(--cta-active))",
         "cta-text": "rgba(var(--cta-text))",
-
-      }
+      },
+      fontFamily: {
+        // Bundled via @fontsource-variable/source-serif-4 (see src/index.css).
+        serif: ['"Source Serif 4 Variable"', "Georgia", "serif"],
+      },
     },
   },
   plugins: [],
 }
-

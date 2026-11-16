@@ -2,11 +2,36 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/png" href="/src/assets/pictures/masterball.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Jeffrey Millan</title>
+    <title>Jeffrey Millan | PhD Student at USC</title>
+    <meta
+      name="description"
+      content="Jeffrey Millan is a PhD student in Computer Engineering at USC researching how information spreads through moving crowds and device-to-device networks."
+    />
+    <meta name="color-scheme" content="light dark" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Jeffrey Millan | PhD Student at USC" />
+    <meta
+      property="og:description"
+      content="Jeffrey Millan is a PhD student in Computer Engineering at USC researching how information spreads through moving crowds and device-to-device networks."
+    />
+    <link rel="icon" type="image/png" sizes="64x64" href="%BASE_URL%favicon.png" />
+    <link rel="apple-touch-icon" href="%BASE_URL%masterball.png" />
   </head>
   <body>
+    <!-- Set the light/dark class before React loads so the page never flashes
+         the wrong theme. Mirrors src/shared/useTheme.js. -->
+    <script>
+      (function () {
+        var theme = "light";
+        try {
+          var saved = localStorage.getItem("theme");
+          if (saved === "light" || saved === "dark") theme = saved;
+          else if (matchMedia("(prefers-color-scheme: dark)").matches) theme = "dark";
+        } catch (e) {}
+        document.body.classList.add(theme);
+      })();
+    </script>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
   </body>
