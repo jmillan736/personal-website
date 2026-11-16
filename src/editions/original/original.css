@@ -1,0 +1,55 @@
+/* Styles that only apply to the "original" edition. Everything is scoped
+   under .edition-original so it never leaks into the academic edition. */
+
+/* A muted text color that still passes WCAG AA (4.5:1) for small text.
+   The shared copy-secondary (115,115,115) is too faint on the light page. */
+.light .edition-original {
+  --orig-muted: 82, 82, 82; /* ~7:1 on the 245 background, ~7.8:1 on white cards */
+  --orig-accent: 109, 40, 217; /* violet-700: purple text that is easy to read */
+}
+.dark .edition-original {
+  --orig-muted: 163, 163, 163; /* ~9:1 on black, ~7.6:1 on the dark cards */
+  --orig-accent: 165, 180, 252; /* indigo-300: the dark CTA indigo is too dim for text */
+}
+
+.edition-original .text-muted {
+  color: rgb(var(--orig-muted));
+}
+.edition-original .text-accent {
+  color: rgb(var(--orig-accent));
+}
+
+/* Cards: soft shadow in light mode. Shadows vanish on a black page, so in
+   dark mode the cards get a thin border instead. */
+.edition-original .orig-card {
+  background-color: rgb(var(--card));
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+}
+.dark .edition-original .orig-card {
+  box-shadow: 0 0 0 1px rgb(var(--border));
+}
+
+/* Visible keyboard focus everywhere, in both themes. */
+.edition-original :focus-visible {
+  outline: 2px solid rgb(var(--cta));
+  outline-offset: 3px;
+  border-radius: 0.375rem;
+}
+/* On the purple contact block (and its hover state) follow the text color. */
+.edition-original .focus-current :focus-visible {
+  outline-color: currentColor;
+}
+
+/* Lets the nav pill scroll sideways on tiny screens without showing a bar. */
+.edition-original .no-scrollbar {
+  scrollbar-width: none;
+}
+.edition-original .no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Keeps headings from leaving a lonely word (or emoji) on the last line. */
+.edition-original .text-balance {
+  text-wrap: balance;
+}

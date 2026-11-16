@@ -1,4 +1,81 @@
+/* Bundled serif font (used by the academic edition via `font-serif`).
+   Loaded from node_modules, so the site never calls out to Google Fonts. */
+@import "@fontsource-variable/source-serif-4";
+@import "@fontsource-variable/source-serif-4/wght-italic.css";
+
 @tailwind base;
+
+/* ── Theme tokens ────────────────────────────────────────────────────────────
+   One of these classes sits on <body> (see src/shared/useTheme.js). Tailwind
+   colors like bg-card / text-copy-primary read these variables.
+   Kept outside @layer so Tailwind never purges them, and placed before
+   components/utilities so utility classes still win. */
+.light {
+  --background: 245, 245, 245;
+
+  --border: 212, 212, 212;
+  --card: 255, 255, 255;
+
+  --copy-primary: 23, 23, 23;
+  --copy-secondary: 115, 115, 115;
+
+  --cta: 139, 92, 246;
+  --cta-active: 124, 58, 237;
+  --cta-text: 255, 255, 255;
+
+  background: rgba(var(--background));
+}
+
+.dark {
+  --background: 0, 0, 0;
+
+  --border: 38, 38, 38;
+  --card: 23, 23, 23;
+
+  --copy-primary: 250, 250, 250;
+  --copy-secondary: 115, 115, 115;
+
+  --cta: 99, 102, 241;
+  --cta-active: 79, 70, 229;
+  --cta-text: 255, 255, 255;
+
+  background: rgba(var(--background));
+}
+
+.red {
+  --background: 254, 202, 202;
+
+  --border: 185, 28, 28;
+  --card: 239, 68, 68;
+
+  --copy-primary: 250, 250, 250;
+  --copy-secondary: 254, 226, 226;
+
+  --cta: 250, 250, 250;
+  --cta-active: 254, 226, 226;
+  --cta-text: 239, 68, 68;
+
+  background: rgba(var(--background));
+}
+
+/* Tells the browser which native widgets (scrollbars, form controls) to use. */
+body.light {
+  color-scheme: light;
+}
+body.dark {
+  color-scheme: dark;
+}
+
+body {
+  min-height: 100vh;
+  color: rgba(var(--copy-primary));
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
 @tailwind components;
 @tailwind utilities;
-

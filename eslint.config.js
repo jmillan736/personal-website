@@ -5,7 +5,7 @@ import reactHooks from 'eslint-plugin-react-hooks'
 import reactRefresh from 'eslint-plugin-react-refresh'
 
 export default [
-  { ignores: ['dist'] },
+  { ignores: ['dist', 'dist-preview'] },
   {
     files: ['**/*.{js,jsx}'],
     languageOptions: {
@@ -34,5 +34,10 @@ export default [
         { allowConstantExport: true },
       ],
     },
+  },
+  // Config files run in Node, not the browser.
+  {
+    files: ['*.config.js'],
+    languageOptions: { globals: globals.node },
   },
 ]
