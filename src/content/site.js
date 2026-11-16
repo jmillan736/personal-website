@@ -14,11 +14,13 @@ import fileSystemImg from "../assets/img/file-system-design.jpg";
 import oilRigImg from "../assets/img/oil-rig.jpg";
 
 export const config = {
-  // Which edition loads when the URL has no #original / #academic hash.
-  defaultEdition: "original", // "original" | "academic"
-  // The small "Original / Academic" switch used while comparing the two
-  // versions. Set to false once you have picked one.
-  showEditionSwitcher: true,
+  // The version of the site visitors see: "academic" or "original".
+  defaultEdition: "academic",
+  // false: visitors only ever see the version above. There is no switch, and
+  // #original / #academic in the URL are ignored.
+  // true: brings back the small "Original / Academic" switch (bottom-right)
+  // and the #original / #academic links, for comparing the two versions.
+  showEditionSwitcher: false,
 };
 
 export const media = { jeffFull, jeffPortrait, penguin, honk };
